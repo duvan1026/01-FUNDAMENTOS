@@ -2,7 +2,9 @@
 
 Primera carpeta creada  del curso javascript de Udemy del instructor Fernando Herrera.
 
-## Polyfill
+Javascript es un lenguaje Interpretado. 
+
+## Polyfills
 
 Es un código que provee el funcionamiento de una nueva característica de JavaScript(ES6), en versiones viejas como ES5.
 
@@ -26,6 +28,13 @@ Las variables se inicializar y declarar de 3 principales formas:
 
 
 Existen varios tipos de variables,pero se centran en 3 principales:
+
+
+### Tipos de instrucciones para imprimir en consola.
+
+* **console.log()**  :  Permite Imprimir un mensaje en la consola.
+* **console.warn()** :  Permite Imprimir un warning en consola.
+* **console.error()**: Permite Imprimir un mensaje de error.
 
 
 
