@@ -12,5 +12,11 @@ Para poder ejecutar un archivo en especifico se debe navegar en la terminal de c
     
     `<script src="**nombre del archivo**"></script>`
 
+    Se reconoce como una mala practica la implementación de archivos javascript en html de la siguiente manera.
+
+    `<script type="text/javascript">`
+       `console.log("Hola Mundo en Html");`
+    `</script>`
+
   Posterior a ello, se deben colocar al final del archivo html y asi evitando que al ejecutarse el archivo se genere algun bloquee o demora en la ejecución del mismo.
 
