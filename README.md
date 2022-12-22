@@ -21,11 +21,11 @@ Las variables se inicializar y declarar de 3 principales formas:
    Permite manejar valores variables, sin importar su tipo de dato, es soportada por la gran mayoria de navegadores.
 * **const**
 
+
    Permite manejar valores constates, sin importar el tipo de datos,las constantes no tienen propiedades para esteblecer o cambiar el valor, lo cual las hace mas ligera que otro tipo de variable como lo son let o var.
 * **var**(No es una buena practica)
 
    Permite manejar valores variables, sin importar su tipo de dato, al utilizarlo, el dato almacenando se guarda en un objeto global llamado window.
-
 
 Existen varios tipos de variables,pero se centran en 3 principales:
 
@@ -70,7 +70,7 @@ Siempre podemos encontrar una lista de los breakpoints en el panel derecho. Esto
 
     Se reconoce como una mala practica la implementación de archivos javascript en html de la siguiente manera.
 
-   ```
+    ```
     <script type="text/javascript">   
         console.log("Hola Mundo en Html");
     </script>
