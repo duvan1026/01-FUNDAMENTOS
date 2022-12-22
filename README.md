@@ -15,10 +15,13 @@ Es un contenedor de información que apunta a un lugar en memoria. Dicha informa
 Las variables se inicializar y declarar de 3 principales formas: 
 
 * **let** 
+
    Permite manejar valores variables, sin importar su tipo de dato, es soportada por la gran mayoria de navegadores.
 * **const**
+
    Permite manejar valores constates, sin importar el tipo de datos.
 * **var**
+
    Permite manejar valores variables, sin importar su tipo de dato.
 
 
@@ -40,9 +43,11 @@ Existen varios tipos de variables,pero se centran en 3 principales:
 
     Se reconoce como una mala practica la implementación de archivos javascript en html de la siguiente manera.
 
-    `<script type="text/javascript">`
-       `console.log("Hola Mundo en Html");`
-    `</script>`
+    ```
+    <script type="text/javascript">   
+        console.log("Hola Mundo en Html");
+    </script>
+    ```
 
   Posterior a ello, se deben colocar al final del archivo html y asi evitando que al ejecutarse el archivo se genere algun bloquee o demora en la ejecución del mismo.
 
