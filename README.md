@@ -21,7 +21,7 @@ Las variables se inicializar y declarar de 3 principales formas:
    Permite manejar valores variables, sin importar su tipo de dato, es soportada por la gran mayoria de navegadores.
 * **const**
 
-   Permite manejar valores constates, sin importar el tipo de datos.
+   Permite manejar valores constates, sin importar el tipo de datos,las constantes no tienen propiedades para esteblecer o cambiar el valor, lo cual las hace mas ligera que otro tipo de variable como lo son let o var.
 * **var**
 
    Permite manejar valores variables, sin importar su tipo de dato.
@@ -35,6 +35,7 @@ Existen varios tipos de variables,pero se centran en 3 principales:
 * **console.log()**  :  Permite Imprimir un mensaje en la consola.
 * **console.warn()** :  Permite Imprimir un warning en consola.
 * **console.error()**: Permite Imprimir un mensaje de error.
+* **console.table({ });**: Permite Imprimir un objeto dinamico en consola.
 
 
 
