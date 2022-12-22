@@ -78,3 +78,10 @@ Siempre podemos encontrar una lista de los breakpoints en el panel derecho. Esto
 
   Posterior a ello, se deben colocar al final del archivo html y asi evitando que al ejecutarse el archivo se genere algun bloquee o demora en la ejecución del mismo.
 
+
+
+
+  ### Importante.
+
+  Quedamos iniciando el video 14 del curso JavaScript Moderno; Guía para  dominar el lenguaje; del curso de Udemy del instructor fernando herrera.
+
