@@ -6,3 +6,11 @@ Para poder ejecutar un archivo en especifico se debe navegar en la terminal de c
 
 * **node** "nombre del archivo"
 
+## Recomendaciones:
+
+* Para el llamado de archivos javascript en archivos html, se recomiendo realizarlo de la siguiente manera:
+    
+    `<script src="**nombre del archivo**"></script>`
+
+  Posterior a ello, se deben colocar al final del archivo html y asi evitando que al ejecutarse el archivo se genere algun bloquee o demora en la ejecución del mismo.
+
