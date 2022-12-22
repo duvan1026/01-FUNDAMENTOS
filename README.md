@@ -2,11 +2,37 @@
 
 Primera carpeta creada  del curso javascript de Udemy del instructor Fernando Herrera.
 
-Para poder ejecutar un archivo en especifico se debe navegar en la terminal de comando dentro d ela carpeta donde se encuentra alojado el archivo y agregar el siguiente comando:
+## Polyfill
 
-* **node** "nombre del archivo"
+Es un código que provee el funcionamiento de una nueva característica de JavaScript(ES6), en versiones viejas como ES5.
+
+## Variable
+
+Es un contenedor de información que apunta a un lugar en memoria. Dicha información puede cambiar en el futuro.
+
+### Tipos de variables
+
+Las variables se inicializar y declarar de 3 principales formas: 
+
+* **let** 
+   Permite manejar valores variables, sin importar su tipo de dato, es soportada por la gran mayoria de navegadores.
+* **const**
+   Permite manejar valores constates, sin importar el tipo de datos.
+* **var**
+   Permite manejar valores variables, sin importar su tipo de dato.
+
+
+Existen varios tipos de variables,pero se centran en 3 principales:
+
+
+
+
 
 ## Recomendaciones:
+
+* Para poder ejecutar un archivo en especifico se debe navegar en la terminal de comando dentro d ela carpeta donde se encuentra alojado el archivo y agregar el siguiente comando:
+
+    **node** "nombre del archivo"
 
 * Para el llamado de archivos javascript en archivos html, se recomiendo realizarlo de la siguiente manera:
     
