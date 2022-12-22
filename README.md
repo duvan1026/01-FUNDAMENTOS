@@ -64,7 +64,9 @@ Siempre podemos encontrar una lista de los breakpoints en el panel derecho. Esto
 
 * Para el llamado de archivos javascript en archivos html, se recomiendo realizarlo de la siguiente manera:
     
-    `<script src="**nombre del archivo**"></script>`
+    ```
+    <script src="**nombre del archivo**"></script>
+    ```
 
     Se reconoce como una mala practica la implementación de archivos javascript en html de la siguiente manera.
 
