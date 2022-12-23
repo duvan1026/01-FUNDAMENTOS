@@ -51,6 +51,10 @@ Existen varios tipos de datos primitivos, los cuales son:
 
 * Symbol: Es un valor único que no es igual a ningún otro valor.
 
+## Palabras reservadas.
+
+Las palabras reservadas y la estructura correcta de los identificadores son algo importante, debemos conocer cuales son y evitar su uso, incluso en aquellos casos donde son aceptadas para algún tipo de artefacto del lenguaje. Aunque los editores modernos suelen avisar de que nos estamos equivocando, son muchas las ocasiones donde perdemos tiempo intentando comprender que está pasando porque hemos utilizado una palabra reservada sin darnos cuenta, por lo cual, las palabras reservadas **son palabras que tienen un uso específico para el cual fueron creadas**.
+
 
 ## Breakpoints (puntos de interrupción)
 
@@ -110,6 +114,8 @@ Estos instrucciones son metodos que vienen dentro del objeto window, es decir si
     ```
 
   Posterior a ello, se deben colocar al final del archivo html y asi evitando que al ejecutarse el archivo se genere algun bloquee o demora en la ejecución del mismo.
+
+* Al nombrar los archivos se debe tener en cuenta que debe ser separado los nombres con un guion (primer-aplicativo), evitando colocar espacios, caracteres especial y mayusculas, teniendo en cuenta que la gran mayoria de servidores funcionan con base a linux.
 
 
 
