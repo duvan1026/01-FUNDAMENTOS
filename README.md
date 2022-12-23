@@ -96,7 +96,7 @@ Estos instrucciones son metodos que vienen dentro del objeto window, es decir si
 
 
 
-  ## Importante.
+## Importante.
 
-  Quedamos iniciando el video 14 del curso JavaScript Moderno; Guía para  dominar el lenguaje; del curso de Udemy del instructor Fernando Herrera.
+Quedamos iniciando el video 14 del curso JavaScript Moderno; Guía para  dominar el lenguaje; del curso de Udemy del instructor Fernando Herrera.
 
