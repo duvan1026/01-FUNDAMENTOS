@@ -31,7 +31,62 @@ Las variables se inicializar y declarar de 3 principales formas:
 
 Las variables **var** en JavaScript se define **Undefined** si esta no ha sido previamente declarada, es decir, JavaScript realiza un scaneo rapido del codigo e identifica que ha pesar de que la variable este declarada pero se esta implementando antes de su declaración la definira de ese modo, de otro modo, declarando la variable tipo **let** o **const**, dara como resultado un error de tipo **No ha sido declarada previamente dicha varible**, dando a entender que no es posible utilizar la variable antes de ser inicializada. 
 
-Existen varios tipos de variables,pero se centran en 3 principales:
+### Tipos de datos de una variable.
+
+**JavaScript** es un lenguaje de programación que funciona a partir de variables. Estas variables se clasifican mediante tipos. Entonces, en JavaScript, tenemos los tipos primitivos y los tipos no primitivos.
+
+#### Datos primitivos: Los tipos primitivos en JavaScript son aquellos valores que no son un objeto y tampoco tienen métodos. Además, **los tipos primitivos son valores inmutables (no se pueden modificar)**.
+
+Existen varios tipos de datos primitivos, los cuales son:
+
+* Boolean: Los tipos primitivos en JavaScript booleanos son todos aquellos valores que se representan en términos de **verdadero y falso (true/false)**. 
+
+* Null: El tipo primitivo null quiere decir que tenemos un **valor nulo** y sin valor en lo absoluto.
+
+* Undefined: El tipo primitivo undefined es una manera de representar la ausencia de un valor. **undefined quiere decir que tenemos un valor indefinido**. En pocas palabras un valor undefined es una variable declarada que aún no se le asigna valor.
+
+* number: El tipo primitivo number se refiere a **todos los valores que representan un número**. Estos valores pueden ser números enteros, como lo sería 3, o números racionales, como lo sería 3.1416, lo cual indica que para JavaScript no hay diferencia entre los enteros, los flotantes, etc, considerandolos casi igual.
+
+* String: Un string también se conoce en programación como una cadena de caracteres. **Los string son muy útiles para almacenar datos que se representan en forma de texto**. En pocas palabras un **String es una cadena de caracteres**.
+
+* Symbol: Es un valor único que no es igual a ningún otro valor.
+
+## Palabras reservadas.
+
+Las palabras reservadas y la estructura correcta de los identificadores son algo importante, debemos conocer cuales son y evitar su uso, incluso en aquellos casos donde son aceptadas para algún tipo de artefacto del lenguaje. Aunque los editores modernos suelen avisar de que nos estamos equivocando, son muchas las ocasiones donde perdemos tiempo intentando comprender que está pasando porque hemos utilizado una palabra reservada sin darnos cuenta, por lo cual, las palabras reservadas **son palabras que tienen un uso específico para el cual fueron creadas**.
+
+En la siguiente imagen se evidencian alguna palabras reservadas y palabras que se deben evitar usar al momento de declarar una variable, función, entre otras.
+
+![Palabras reservadas en JavaScript](https://github.com/duvan1026/01-fundamentos/blob/developer/assets/images/palabras-reservadas.png)
+
+En el siguiente [link][https://mothereff.in/js-variables#%E0%B2%A0%5f%E0%B2%A0], podemos verificar si la palabra a implementar es aceptada por la sintasis del lenguaje de javaScript.
+
+
+## Estandar para nombrar variables
+
+* No pueden crear nombres de variables que empiecen con números,punto entre medio del nombre, entre otros, como por ejemplo:
+
+   ```
+      let 1abc = 123;
+      let objeto123.123 = 123;
+      let año = 1233;
+   ```
+
+* Se pueden crear variables de las siquientes formas:
+
+   ```
+      let _abc = 123;
+      let objeto123 = 1;
+      let precio99_99 = 123;
+   ```
+
+* Al nombrar las variables, su nombre debe tener algun sentido semántico, algo significativo que represente la función de dicha variable.
+
+   ```
+      let jugadorConPuntajeMasAlto = 'Duvan';
+   ```
+* Manejar Lower Camel case para nombre de variables **( primerSegundoTercero )** y oper kamel case **(PrimerSegundoTercero)** para el nombre de clases.
+
 
 
 ## Breakpoints (puntos de interrupción)
@@ -74,7 +129,7 @@ Estos instrucciones son metodos que vienen dentro del objeto window, es decir si
 * Para poder ejecutar un archivo en especifico se debe navegar en la terminal de comando dentro d ela carpeta donde se encuentra alojado el archivo y agregar el siguiente comando:
 
     ```
-    **node** "nombre del archivo"
+    node "nombre del archivo"
     ```
 
 * Para el llamado de archivos javascript en archivos html, se recomiendo realizarlo de la siguiente manera:
@@ -92,6 +147,8 @@ Estos instrucciones son metodos que vienen dentro del objeto window, es decir si
     ```
 
   Posterior a ello, se deben colocar al final del archivo html y asi evitando que al ejecutarse el archivo se genere algun bloquee o demora en la ejecución del mismo.
+
+* Al nombrar los archivos se debe tener en cuenta que debe ser separado los nombres con un guion (primer-aplicativo), evitando colocar espacios, caracteres especial y mayusculas, teniendo en cuenta que la gran mayoria de servidores funcionan con base a linux.
 
 
 
