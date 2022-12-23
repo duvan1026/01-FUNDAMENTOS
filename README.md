@@ -59,7 +59,34 @@ En la siguiente imagen se evidencian alguna palabras reservadas y palabras que s
 
 ![Palabras reservadas en JavaScript](https://github.com/duvan1026/01-fundamentos/blob/developer/assets/images/palabras-reservadas.png)
 
-En el siguiente [link][https://mothereff.in/js-variables#%E0%B2%A0%5f%E0%B2%A0], podemos verificar si la palabra a implementar es aceptada por la sintasis del lenguaje de javaScript
+En el siguiente [link][https://mothereff.in/js-variables#%E0%B2%A0%5f%E0%B2%A0], podemos verificar si la palabra a implementar es aceptada por la sintasis del lenguaje de javaScript.
+
+
+## Estandar para nombrar variables
+
+* No pueden crear nombres de variables que empiecen con números,punto entre medio del nombre, entre otros, como por ejemplo:
+
+   ```
+      let 1abc = 123;
+      let objeto123.123 = 123;
+      let año = 1233;
+   ```
+
+* Se pueden crear variables de las siquientes formas:
+
+   ```
+      let _abc = 123;
+      let objeto123 = 1;
+      let precio99_99 = 123;
+   ```
+
+* Al nombrar las variables, su nombre debe tener algun sentido semántico, algo significativo que represente la función de dicha variable.
+
+   ```
+      let jugadorConPuntajeMasAlto = 'Duvan';
+   ```
+* Manejar Lower Camel case para nombre de variables **( primerSegundoTercero )** y oper kamel case **(PrimerSegundoTercero)** para el nombre de clases.
+
 
 
 ## Breakpoints (puntos de interrupción)
