@@ -1,4 +1,5 @@
 
+
 // document.addEventListener("DOMContentLoaded",function(){
 //     alert("Hola desde app.js");
 // })
@@ -24,4 +25,4 @@ c = 'Hola de nuevo';
 
 // console.table({a, b, c, d, x });
 
-var miNombre = 'Duvan';
+let miNuevoNombre = "Duvan castro";

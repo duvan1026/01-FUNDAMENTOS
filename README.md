@@ -18,14 +18,18 @@ Las variables se inicializar y declarar de 3 principales formas:
 
 * **let** 
 
-   Permite manejar valores variables, sin importar su tipo de dato, es soportada por la gran mayoria de navegadores.
+   Permite manejar valores variables, sin importar su tipo de dato, es soportada por la gran mayoria de navegadores, No sobrescribe las variables que se encuentran en el objeto global window o del bloque donde este corriendo JavaScript.
 * **const**
 
 
-   Permite manejar valores constates, sin importar el tipo de datos,las constantes no tienen propiedades para esteblecer o cambiar el valor, lo cual las hace mas ligera que otro tipo de variable como lo son let o var.
-* **var**(No es una buena practica)
+   Permite manejar valores constates, sin importar el tipo de datos,las constantes no tienen propiedades para esteblecer o cambiar el valor, lo cual las hace mas ligera que otro tipo de variable como lo son let o var, No sobrescribe las variables que se encuentran en el objeto global window o del bloque donde este corriendo JavaScript.
+* **var** (No es una buena practica)
 
-   Permite manejar valores variables, sin importar su tipo de dato, al utilizarlo, el dato almacenando se guarda en un objeto global llamado window.
+   Permite manejar valores variables, sin importar su tipo de dato, al utilizarlo, el dato almacenando se guarda en un objeto global llamado window, lo cual es un problema porque permite reemplazar propiedades y objetos propios del mismo.
+
+   **Nota:** Se recomienda utilizarlo solo si se esta trabajando con navegadores web muy antiguos( inferiores o iguales a versiones del 2015), para asi aumentar la compatibilida.
+
+Las variables **var** en JavaScript se define **Undefined** si esta no ha sido previamente declarada, es decir, JavaScript realiza un scaneo rapido del codigo e identifica que ha pesar de que la variable este declarada pero se esta implementando antes de su declaración la definira de ese modo, de otro modo, declarando la variable tipo **let** o **const**, dara como resultado un error de tipo **No ha sido declarada previamente dicha varible**, dando a entender que no es posible utilizar la variable antes de ser inicializada. 
 
 Existen varios tipos de variables,pero se centran en 3 principales:
 
@@ -52,6 +56,15 @@ Siempre podemos encontrar una lista de los breakpoints en el panel derecho. Esto
 * **console.error()**: Permite Imprimir un mensaje de error.
 * **console.table({ });**: Permite Imprimir un objeto dinamico en consola.
 
+## Tipos de formas de ingreso de información del usuario.
+
+Las siguientes instrucciones son bloqueantes, es decir bloquean al navegador web hasta que se reciba una accion por parte del usuario, cabe resaltar que estas instrucciones pueden manejar mediante librerias que mejoran su aspecto visual.
+
+Estos instrucciones son metodos que vienen dentro del objeto window, es decir si se corre en otro lugar que no sea el navegador web o que no contenga la instancia de window no va a funcionar.
+
+* **alert** ( alert(message) ): su finalidad es la de mostrar por pantalla mensajes de alerta encuadrados en una pequeña ventana modal.
+* **prompt** ( prompt(message, default) ); Determina si el usuario ha clickado en ‘Aceptar’, ‘Cancelar’ o si hay metido texto en dicha ventana modal, retorna el texto que el usuario escriba en él.
+* **confirm** ( confirm(message) ): Nos ayuda a determinar si el usuario ha clickado en ‘Aceptar’, ‘Cancelar’.
 
 
 
@@ -60,7 +73,9 @@ Siempre podemos encontrar una lista de los breakpoints en el panel derecho. Esto
 
 * Para poder ejecutar un archivo en especifico se debe navegar en la terminal de comando dentro d ela carpeta donde se encuentra alojado el archivo y agregar el siguiente comando:
 
+    ```
     **node** "nombre del archivo"
+    ```
 
 * Para el llamado de archivos javascript en archivos html, se recomiendo realizarlo de la siguiente manera:
     
@@ -81,7 +96,7 @@ Siempre podemos encontrar una lista de los breakpoints en el panel derecho. Esto
 
 
 
-  ### Importante.
+## Importante.
 
-  Quedamos iniciando el video 14 del curso JavaScript Moderno; Guía para  dominar el lenguaje; del curso de Udemy del instructor fernando herrera.
+Quedamos iniciando el video 14 del curso JavaScript Moderno; Guía para  dominar el lenguaje; del curso de Udemy del instructor Fernando Herrera.
 
