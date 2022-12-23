@@ -1,3 +1,14 @@
 
 
-console.log('Hola Mundo');
+let constante = 123;
+
+// const
+
+// if
+
+// try
+
+// while
+// for()
+
+// enum
