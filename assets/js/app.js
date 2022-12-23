@@ -24,4 +24,5 @@ c = 'Hola de nuevo';
 
 // console.table({a, b, c, d, x });
 
-var miNombre = 'Duvan';
+var outerWidth = 1000000;
+var outerHeight = 600;
