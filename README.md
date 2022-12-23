@@ -55,6 +55,7 @@ Existen varios tipos de datos primitivos, los cuales son:
 
 Las palabras reservadas y la estructura correcta de los identificadores son algo importante, debemos conocer cuales son y evitar su uso, incluso en aquellos casos donde son aceptadas para algún tipo de artefacto del lenguaje. Aunque los editores modernos suelen avisar de que nos estamos equivocando, son muchas las ocasiones donde perdemos tiempo intentando comprender que está pasando porque hemos utilizado una palabra reservada sin darnos cuenta, por lo cual, las palabras reservadas **son palabras que tienen un uso específico para el cual fueron creadas**.
 
+![Palabras reservadas en JavaScript](https://github.com/duvan1026/01-fundamentos/blob/developer/assets/images/palabras-reservadas.png)
 
 ## Breakpoints (puntos de interrupción)
 
