@@ -1,6 +1,4 @@
 
-console.log( miNuevoNombre  + 'Castro' );
-
 
 // document.addEventListener("DOMContentLoaded",function(){
 //     alert("Hola desde app.js");
@@ -26,6 +24,5 @@ const saludo = c + d;
 c = 'Hola de nuevo';
 
 // console.table({a, b, c, d, x });
-
 
 let miNuevoNombre = "Duvan castro";
