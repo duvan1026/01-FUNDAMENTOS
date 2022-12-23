@@ -23,7 +23,7 @@ Las variables se inicializar y declarar de 3 principales formas:
 
 
    Permite manejar valores constates, sin importar el tipo de datos,las constantes no tienen propiedades para esteblecer o cambiar el valor, lo cual las hace mas ligera que otro tipo de variable como lo son let o var, No sobrescribe las variables que se encuentran en el objeto global window o del bloque donde este corriendo JavaScript.
-* **var**(No es una buena practica)
+* **var** (No es una buena practica)
 
    Permite manejar valores variables, sin importar su tipo de dato, al utilizarlo, el dato almacenando se guarda en un objeto global llamado window, lo cual es un problema porque permite reemplazar propiedades y objetos propios del mismo.
 
@@ -73,7 +73,9 @@ Estos instrucciones son metodos que vienen dentro del objeto window, es decir si
 
 * Para poder ejecutar un archivo en especifico se debe navegar en la terminal de comando dentro d ela carpeta donde se encuentra alojado el archivo y agregar el siguiente comando:
 
+    ```
     **node** "nombre del archivo"
+    ```
 
 * Para el llamado de archivos javascript en archivos html, se recomiendo realizarlo de la siguiente manera:
     
@@ -94,7 +96,7 @@ Estos instrucciones son metodos que vienen dentro del objeto window, es decir si
 
 
 
-  ### Importante.
+  ## Importante.
 
   Quedamos iniciando el video 14 del curso JavaScript Moderno; Guía para  dominar el lenguaje; del curso de Udemy del instructor Fernando Herrera.
 
