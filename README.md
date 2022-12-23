@@ -92,7 +92,7 @@ Estos instrucciones son metodos que vienen dentro del objeto window, es decir si
 * Para poder ejecutar un archivo en especifico se debe navegar en la terminal de comando dentro d ela carpeta donde se encuentra alojado el archivo y agregar el siguiente comando:
 
     ```
-    **node** "nombre del archivo"
+    node "nombre del archivo"
     ```
 
 * Para el llamado de archivos javascript en archivos html, se recomiendo realizarlo de la siguiente manera:
