@@ -121,6 +121,10 @@ Estos instrucciones son metodos que vienen dentro del objeto window, es decir si
 * **prompt** ( prompt(message, default) ); Determina si el usuario ha clickado en ‘Aceptar’, ‘Cancelar’ o si hay metido texto en dicha ventana modal, retorna el texto que el usuario escriba en él.
 * **confirm** ( confirm(message) ): Nos ayuda a determinar si el usuario ha clickado en ‘Aceptar’, ‘Cancelar’.
 
+## Arreglos
+
+Son un objeto muy parecido a una lista de información, que contienen un grupo de elementos. Usualmente , esa información dentro del arreglo es del mismo tipo de dato... Pero en JavaScript no se cumple esta regla, 
+
 
 
 
