@@ -32,3 +32,7 @@ console.log( juegos );
 let juegosBorrados = juegos.splice( pos, 2 ); // en este caso borramos 2 datos apartir de la posicion pos(1) del arreglo y alamacenamos estos dos valores en la varrible asignada.
 console.log({ juegosBorrados, juegos });
 
+
+// Identificamos en que posicion indice del array se encuentra un objeto.
+let metroidIndex = juegos.indexOf( 'Metroid' ); // CaseSenNsItIvE
+console.log({metroidIndex});
