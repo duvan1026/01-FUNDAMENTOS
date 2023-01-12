@@ -20,8 +20,13 @@ let arregloCosas = [
     function(){},
     ()=>{},
     { a: 1 },
-    ['X', 'Megaman', 'Zero', 'Dr. Light'],
+    ['X', 'Megaman', 'Zero', 'Dr. Light', [
+        'Dr. Willy',
+        'Woodman',
+    ]],
 ];
 
-console.log({ arregloCosas });
-
+// console.log({ arregloCosas });
+// console.log( arregloCosas[2] );
+// console.log( arregloCosas[7][3] ); // Navegar un arreglo dentro de un arreglo.
+console.log( arregloCosas[7][4][1] ); 
