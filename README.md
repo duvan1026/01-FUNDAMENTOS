@@ -172,6 +172,38 @@ Los elementos del array están numerados comenzando desde cero.
 
 Son funciones que vienen internas en los arreglos.
 
+#### forEach()
+
+forEach() ejecuta la función callback una vez por cada elemento presente en el array en orden ascendente.
+
+ * Parametros.
+
+   * Callback: Función a ejecutar por cada elemento, que recibe tres argumentos:
+
+      *currentValue: El elemento actual siendo procesado en el array.
+      *index (Opcional): El índice del elemento actual siendo procesado en el array.
+      *array (Opcional): El vector en el que forEach() esta siendo aplicado.
+   
+   * thisArg(Opcional): Valor que se usará como this cuando se ejecute el callback.
+
+##### Ejemplos
+
+* Imprimiendo el contenido de un array.
+
+  El siguiente código imprime una línea por cada elemento en un array:
+
+   ```
+   function logArrayElements(element, index, array) {
+      console.log("a[" + index + "] = " + element);
+   }
+   // Nótese que se evita el 2° índice ya que no hay ningún elemento en esa posición del array
+   [2, 5, , 9].forEach(logArrayElements);
+   // salida:
+   // a[0] = 2
+   // a[1] = 5
+   // a[2] = 9
+   ```
+
 
 
 
