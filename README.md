@@ -168,6 +168,13 @@ Los elementos del array están numerados comenzando desde cero.
    fruits[3] = 'Lemon'; // ahora ["Apple", "Orange", "Pear", "Lemon"]
    ```
 
+### Metodos Basicos 
+
+Son funciones que vienen internas en los arreglos.
+
+
+
+
 
 ## Recomendaciones:
 
