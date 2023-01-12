@@ -15,3 +15,6 @@ juegos.forEach( (elemento, indice, arr) => {
 
 let nuevaLongitud = juegos.push( 'F-Zero' );
 console.log({ nuevaLongitud, juegos });
+
+nuevaLongitud = juegos.unshift('Fire Emblem');
+console.log({ nuevaLongitud, juegos });
