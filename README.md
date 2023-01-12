@@ -123,9 +123,50 @@ Estos instrucciones son metodos que vienen dentro del objeto window, es decir si
 
 ## Arreglos
 
-Son un objeto muy parecido a una lista de información, que contienen un grupo de elementos. Usualmente , esa información dentro del arreglo es del mismo tipo de dato... Pero en JavaScript no se cumple esta regla, 
+Son un objeto muy parecido a una lista de información, que contienen un grupo de elementos, los cuales permiten almacenar colecciones ordenadas de datos a través de nombres.
 
+Usualmente , esa información dentro del arreglo es del mismo tipo de dato... **Pero en JavaScript no se cumple esta regla**. 
 
+### Declaración
+
+Hay dos sintaxis para crear un array vacío:
+
+   ```
+   let arr = new Array();
+   let arr = [];
+   ```
+
+Recomienda las buenas practicas implementar la segunda opción. Podemos suministrar elementos iniciales entre los corchetes:
+
+   ```
+   let fruits = ["Apple", "Orange", "Plum"];
+   ```
+
+### Modificar elemento en especifico
+
+Los elementos del array están numerados comenzando desde cero. 
+
+* Se obtiene un elemento por su número entre corchetes de la siguiente manera:
+
+   ```
+   let fruits = ["Apple", "Orange", "Plum"];
+
+   alert( fruits[0] ); // Apple
+   alert( fruits[1] ); // Orange
+   alert( fruits[2] ); // Plum
+   ```
+
+* Podemos reemplazar un elemento:
+
+   ```
+   fruits[2] = 'Pear'; // ahora ["Apple", "Orange", "Pear"]
+   ```
+
+* …o agregar uno nuevo al array:
+
+   ```
+   fruits[3] = 'Lemon'; // ahora ["Apple", "Orange", "Pear", "Lemon"]
+   ```
 
 
 ## Recomendaciones:
