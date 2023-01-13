@@ -62,7 +62,7 @@ En la siguiente imagen se evidencian alguna palabras reservadas y palabras que s
 En el siguiente [link](https://mothereff.in/js-variables#%E0%B2%A0%5f%E0%B2%A0), podemos verificar si la palabra a implementar es aceptada por la sintasis del lenguaje de javaScript.
 
 
-## Estandar para nombrar variables
+### Estandar para nombrar variables
 
 * No pueden crear nombres de variables que empiecen con números,punto entre medio del nombre, entre otros, como por ejemplo:
 
