@@ -123,7 +123,284 @@ Estos instrucciones son metodos que vienen dentro del objeto window, es decir si
 
 ## Arreglos
 
-Son un objeto muy parecido a una lista de información, que contienen un grupo de elementos. Usualmente , esa información dentro del arreglo es del mismo tipo de dato... Pero en JavaScript no se cumple esta regla, 
+Son un objeto muy parecido a una lista de información, que contienen un grupo de elementos, los cuales permiten almacenar colecciones ordenadas de datos a través de nombres.
+
+Usualmente , esa información dentro del arreglo es del mismo tipo de dato... **Pero en JavaScript no se cumple esta regla**. 
+
+### Declaración
+
+Hay dos sintaxis para crear un array vacío:
+
+   ```
+   let arr = new Array();
+   let arr = [];
+   ```
+
+Recomienda las buenas practicas implementar la segunda opción. Podemos suministrar elementos iniciales entre los corchetes:
+
+   ```
+   let fruits = ["Apple", "Orange", "Plum"];
+   ```
+
+### Modificar elemento en especifico
+
+Los elementos del array están numerados comenzando desde cero. 
+
+* Se obtiene un elemento por su número entre corchetes de la siguiente manera:
+
+   ```
+   let fruits = ["Apple", "Orange", "Plum"];
+
+   alert( fruits[0] ); // Apple
+   alert( fruits[1] ); // Orange
+   alert( fruits[2] ); // Plum
+   ```
+
+* Podemos reemplazar un elemento:
+
+   ```
+   fruits[2] = 'Pear'; // ahora ["Apple", "Orange", "Pear"]
+   ```
+
+* …o agregar uno nuevo al array:
+
+   ```
+   fruits[3] = 'Lemon'; // ahora ["Apple", "Orange", "Pear", "Lemon"]
+   ```
+
+### Metodos Basicos 
+
+Son funciones que vienen internas en los arreglos.
+
+#### forEach()
+
+forEach() ejecuta la función callback una vez por cada elemento presente en el array en orden ascendente. En otras palabras **recorre el arreglo elemento por elemento**.
+
+ * Parametros.
+
+   * Callback: Función a ejecutar por cada elemento, que recibe tres argumentos:
+
+      *currentValue: El elemento actual siendo procesado en el array.
+      *index (Opcional): El índice del elemento actual siendo procesado en el array.
+      *array (Opcional): El vector en el que forEach() esta siendo aplicado.
+   
+   * thisArg(Opcional): Valor que se usará como this cuando se ejecute el callback.
+
+##### Ejemplo
+
+* Imprimiendo el contenido de un array.
+
+  El siguiente código imprime una línea por cada elemento en un array:
+
+   ```
+   function logArrayElements(element, index, array) {
+      console.log("a[" + index + "] = " + element);
+   }
+
+    // Nótese que se evita el 2° índice ya que no hay ningún elemento en esa posición del array  
+   [2, 5, , 9].forEach(logArrayElements);
+
+
+   // salida:
+   // a[0] = 2
+   // a[1] = 5
+   // a[2] = 9
+   ```
+
+
+#### push()
+
+El método push() **añade uno o más elementos al final de un array** y devuelve la nueva longitud del array.
+
+* Parametros.
+
+   Los elementos a añadir al final del array.
+
+* Valor devuelto.
+
+   La propiedad length del objeto sobre el cual se efectuó la llamada, es decir el **tamaño del objeto**
+
+##### Ejemplo
+
+* Añadiendo elementos a un array
+
+   El siguiente código crea el array sports que contiene dos elementos, luego añade 2 elementos más. Tras ejecutar el código, sports contiene 4 elementos: "soccer", "baseball", "football" and "swimming".
+
+   ```
+   var sports = ['soccer', 'baseball'];
+   var total = sports.push('football', 'swimming');
+
+   console.log(sports); // ['soccer', 'baseball', 'football', 'swimming']
+   console.log(total);  // 4
+   ```
+
+#### unshift()
+
+El método unshift() **agrega uno o más elementos al inicio del array**, y devuelve la nueva longitud del array.
+
+##### Sintaxis
+
+   ```
+   arr.unshift(elemento1[, ...[, elementoN]])
+   ```
+
+* Parámetros
+   
+   **elementoN** : Elementos a agregar al inicio del array.
+
+* Devuelve
+   
+   La nueva propiedad length del objeto sobre el cual el método fue llamado.
+
+##### Ejemplos
+
+   ```
+   var arr = [1, 2];
+
+   arr.unshift(0); // resultado de la llamada es 3, la nueva longitud del array
+   // arr es [0, 1, 2]
+
+   arr.unshift(-2, -1); // = 5
+   // arr es [-2, -1, 0, 1, 2]
+
+   arr.unshift([-3]);
+   // arr es [[-3], -2, -1, 0, 1, 2]
+   ```
+
+#### pop()
+
+El método pop() **elimina el último elemento de un array y lo devuelve**. Este método cambia la longitud del array.
+
+##### Sintaxis
+
+  ```
+  arr.pop()
+  ```
+
+* Valor devuelto
+
+   El elemento que ha sido eliminado del array; undefined si el array está vacío.
+
+##### Ejemplos
+
+* Eliminando el último elemento de un array
+
+   El siguiente código crea el array myFish, que contiene cuatro elementos, a continuación, elimina su último elemento.
+
+   ```
+   var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+
+   var popped = myFish.pop();
+
+   console.log(myFish); // ['angel', 'clown', 'mandarin' ]
+
+   console.log(popped); // 'sturgeon'
+   ```
+
+#### Splice()
+
+El método splice() **cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos**.
+
+##### Sintaxis
+   
+   ```
+   array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+   ```
+
+* Parámetros
+
+   * start 
+
+      Índice donde se comenzará a cambiar el array (con 0 como origen). Si es mayor que la longitud del array, el punto inicial será la longitud del array. Si es negativo, empezará esa cantidad de elementos contando desde el final.
+
+   * deleteCount Opcional
+
+       Un entero indicando el número de elementos a eliminar del array antiguo.
+
+      Si deleteCount se omite, o si su valor es mayor que arr.length - start (esto significa, si es mayor que el número de elementos restantes del array, comenzando desde start), entonces todos los elementos desde start hasta el final del array serán eliminados.
+
+      Si deleteCount es igual a 0 o negativo, no se eliminará ningún elemento. En este caso, se debe especificar al menos un nuevo elemento (ver más abajo).
+
+   * item1, item2, ... Opcional
+         
+      Los elementos que se agregarán al array, empezando en el índice start. Si no se especifica ningún elemento, splice() solamente eliminará elementos del array.
+
+* Valor devuelto
+
+   Un array que contiene los elementos eliminados. Si sólo se ha eliminado un elemento, devuelve un array con un solo elemento. Si no se ha eliminado ningún elemento, devuelve un array vacío.
+
+##### Ejemplo.
+
+* Eliminar 0 elementos desde el índice 2 e insertar "drum"
+
+   ```
+   var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+   var removed = myFish.splice(2, 0, 'drum');
+
+   // myFish is ["angel", "clown", "drum", "mandarin", "sturgeon"]
+   // removed is [], no elements removed
+   ```
+
+* Eliminar 1 elemento desde el índice 3
+
+   ```
+   var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
+   var removed = myFish.splice(3, 1);
+
+   // removed is ["mandarin"]
+   // myFish is ["angel", "clown", "drum", "sturgeon"]
+   ```
+
+
+* Eliminar 2 elementos desde el índice 0 e insertar "parrot", "anemone" y "blue"
+
+   ```
+   var myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
+   var removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
+
+   // myFish is ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
+   // removed is ["angel", "clown"]
+   ```
+
+#### indexOf()
+
+El método indexOf() **retorna el primer índice en el que se puede encontrar un elemento dado en el array**, ó retorna -1 si el elemento no esta presente.
+
+##### Sintaxis
+
+   ```
+   array.indexOf(searchElement[, fromIndex])
+   ```
+
+* Parámetros
+
+   * searchElement
+      Elemento a encontrar en el array.
+
+   * fromIndex Opcional
+      Indica el índice por el que se comienza la búsqueda. Por defecto es 0, por lo que se busca en todo el array. Si el índice es mayor o igual a la longitud del array, devuelve -1, ya que no se buscaría en el array. Si el valor es negativo, se toma restando posiciones desde el final del array. Hay que tener en cuenta que aunque el índice sea negativo, la búsqueda seguirá realizándose en un orden incremental. Si el índice calculado es menor de 0, la búsqueda se realizará por todo el array.
+
+* Valor de retorno
+
+   El primer índice del elemento en la matriz; -1 si no se encuentra.
+
+##### Ejemplos
+
+* Usando indexOf()
+
+   El siguiente ejemplo usa indexof() para localizar valores en un array
+
+   ```
+   var array = [2, 9, 9];
+   array.indexOf(2);     // 0
+   array.indexOf(7);     // -1
+   array.indexOf(9, 2);  // 2
+   array.indexOf(2, -1); // -1
+   array.indexOf(2, -3); // 0
+   ```
+
+
+
 
 
 
