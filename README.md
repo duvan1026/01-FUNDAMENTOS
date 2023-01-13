@@ -174,7 +174,7 @@ Son funciones que vienen internas en los arreglos.
 
 #### forEach()
 
-forEach() ejecuta la función callback una vez por cada elemento presente en el array en orden ascendente.
+forEach() ejecuta la función callback una vez por cada elemento presente en el array en orden ascendente. En otras palabras **recorre el arreglo elemento por elemento**.
 
  * Parametros.
 
@@ -196,8 +196,11 @@ forEach() ejecuta la función callback una vez por cada elemento presente en el 
    function logArrayElements(element, index, array) {
       console.log("a[" + index + "] = " + element);
    }
-   // Nótese que se evita el 2° índice ya que no hay ningún elemento en esa posición del array
+
+    // Nótese que se evita el 2° índice ya que no hay ningún elemento en esa posición del array  
    [2, 5, , 9].forEach(logArrayElements);
+
+
    // salida:
    // a[0] = 2
    // a[1] = 5
