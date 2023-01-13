@@ -106,7 +106,29 @@ console.log(persona[llave]);
 
 Primero definimos una variable **llave**, a la que le asignamos el valor **"nombre"** y utilizamos esa variable para obtener el valor. Esto va a ser útil más adelante cuando estemos recorriendo las propiedades de un objeto.
 
+##### Agregando nuevas propiedades al objeto
 
+Es posible agregar más propiedades a un objeto después de que ha sido creado. Por ejemplo, podríamos agregar una propiedad con llave peso y valor 70 de la siguiente forma:
+
+```
+persona.peso = 70;
+```
+
+##### Modificando propiedades del objeto
+
+Es también posible modificar los valores de las propiedades de un objeto. Por ejemplo, si queremos cambiar el valor de la llave peso lo podemos hacer de la siguiente forma:
+
+```
+persona.peso = 65;
+```
+
+##### Eliminando propiedades de un objeto
+
+Para eliminar una propiedad de un objeto utiliza el operador delete:
+
+```
+delete person.peso;
+```
 
 
 
