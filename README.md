@@ -238,7 +238,7 @@ El método push() **añade uno o más elementos al final de un array** y devuelv
 
 El método unshift() **agrega uno o más elementos al inicio del array**, y devuelve la nueva longitud del array.
 
-#### Sintaxis
+##### Sintaxis
 
    ```
    arr.unshift(elemento1[, ...[, elementoN]])
@@ -252,7 +252,7 @@ El método unshift() **agrega uno o más elementos al inicio del array**, y devu
    
    La nueva propiedad length del objeto sobre el cual el método fue llamado.
 
-#### Ejemplos
+##### Ejemplos
 
    ```
    var arr = [1, 2];
@@ -267,8 +267,35 @@ El método unshift() **agrega uno o más elementos al inicio del array**, y devu
    // arr es [[-3], -2, -1, 0, 1, 2]
    ```
 
+#### pop()
 
+El método pop() **elimina el último elemento de un array y lo devuelve**. Este método cambia la longitud del array.
 
+##### Sintaxis
+
+  ```
+  arr.pop()
+  ```
+
+* Valor devuelto
+
+   El elemento que ha sido eliminado del array; undefined si el array está vacío.
+
+##### Ejemplos
+
+* Eliminando el último elemento de un array
+
+   El siguiente código crea el array myFish, que contiene cuatro elementos, a continuación, elimina su último elemento.
+
+   ```
+   var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+
+   var popped = myFish.pop();
+
+   console.log(myFish); // ['angel', 'clown', 'mandarin' ]
+
+   console.log(popped); // 'sturgeon'
+   ```
 
 
 ## Recomendaciones:
