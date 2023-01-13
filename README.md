@@ -186,7 +186,7 @@ forEach() ejecuta la función callback una vez por cada elemento presente en el 
    
    * thisArg(Opcional): Valor que se usará como this cuando se ejecute el callback.
 
-##### Ejemplos
+##### Ejemplo
 
 * Imprimiendo el contenido de un array.
 
@@ -207,6 +207,32 @@ forEach() ejecuta la función callback una vez por cada elemento presente en el 
    // a[2] = 9
    ```
 
+
+#### push()
+
+El método push() **añade uno o más elementos al final de un array** y devuelve la nueva longitud del array.
+
+* Parametros.
+
+   Los elementos a añadir al final del array.
+
+* Valor devuelto.
+
+   La propiedad length del objeto sobre el cual se efectuó la llamada, es decir el **tamaño del objeto**
+
+##### Ejemplo
+
+* Añadiendo elementos a un array
+
+   El siguiente código crea el array sports que contiene dos elementos, luego añade 2 elementos más. Tras ejecutar el código, sports contiene 4 elementos: "soccer", "baseball", "football" and "swimming".
+
+   ```
+   var sports = ['soccer', 'baseball'];
+   var total = sports.push('football', 'swimming');
+
+   console.log(sports); // ['soccer', 'baseball', 'football', 'swimming']
+   console.log(total);  // 4
+   ```
 
 
 
