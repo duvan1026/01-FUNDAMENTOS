@@ -34,3 +34,28 @@ console.log( 'vivo :', personaje[ x ] );
 
 console.log('Ultima pelicula:', personaje['ultimo pelicula']);
 
+// Más detalles
+
+delete personaje.edad; // Borramos como tal la propiedad edad.
+console.log( personaje );
+
+personaje.casado = true; // Crear una nueva propiedad en el objeto.
+
+const entriesPares = Object.entries( personaje ); // Devuelve una matriz con las clave-pares de propiedad del objeto.
+console.log( entriesPares );
+
+Object.freeze( personaje ); // Congela el objeto, denegando cualquier cambio en sus propiedades.
+
+personaje.dinero = 1000000000;
+personaje,casado = false;
+personaje.direccion.ubicacion = 'Costa Rica';
+console.log( personaje );
+
+const propiedades = Object.getOwnPropertyNames( personaje ); // Me trae los nombres de las propiedades del objeto
+const valores     = Object.values( personaje ); // Me trae los valores de las propiedades del objeto.
+console.log({ propiedades, valores });
+
+
+
+
+
