@@ -35,7 +35,9 @@ Las variables **var** en JavaScript se define **Undefined** si esta no ha sido p
 
 **JavaScript** es un lenguaje de programación que funciona a partir de variables. Estas variables se clasifican mediante tipos. Entonces, en JavaScript, tenemos los tipos primitivos y los tipos no primitivos.
 
-#### Datos primitivos: Los tipos primitivos en JavaScript son aquellos valores que no son un objeto y tampoco tienen métodos. Además, **los tipos primitivos son valores inmutables (no se pueden modificar)**.
+#### Datos primitivos:
+
+Los tipos primitivos en JavaScript son aquellos valores que no son un objeto y tampoco tienen métodos. Además, **los tipos primitivos son valores inmutables (no se pueden modificar)**.
 
 Existen varios tipos de datos primitivos, los cuales son:
 
@@ -50,6 +52,63 @@ Existen varios tipos de datos primitivos, los cuales son:
 * String: Un string también se conoce en programación como una cadena de caracteres. **Los string son muy útiles para almacenar datos que se representan en forma de texto**. En pocas palabras un **String es una cadena de caracteres**.
 
 * Symbol: Es un valor único que no es igual a ningún otro valor.
+
+
+
+#### Objetos literales:
+
+Los objetos en JavaScript nos ayudan agrupar información. Un objeto no es más que un conjunto de propiedades en donde cada propiedad está compuesta de una llave y un valor. Veamos un primer ejemplo:
+
+```
+var persona = {
+  nombre: "Germán",
+  apellido: "Escobar",
+  edad: 35,
+  estatura: 1.8
+}
+```
+
+En este ejemplo estamos creando un objeto y lo estamos almacenando en la variable persona. **Un objeto se define utilizando corchetes {}**. Las propiedades se separan con coma (,) y las llaves y valores se separan con dos puntos (:).
+
+En este objeto estamos almacenando la información de una persona, pero en un objeto podemos almacenar cualquier tipo de información que requiera esa asociación llave-valor.
+
+El valor de una propiedad puede **ser cualquier tipo de datos** en JavaScript: **números, cadenas de texto, booleanos, arreglos e incluso funciones y otros objetos**.
+
+##### Obteniendo valores de un objeto
+
+Para obtener el nombre de la persona en el objeto que definimos previamente lo haríamos utilizando persona.nombre. Por ejemplo:
+
+```
+console.log(persona.nombre);
+```
+
+Para obtener el valor de una llave en un objeto utilizamos la notación punto (.): el nombre de la variable, seguido de punto, seguido del nombre de la llave:
+
+```
+console.log(persona.nombre); // imprime Germán
+console.log(persona.apellido); // imprime Escobar
+console.log(persona.edad); // imprime 35
+console.log(persona.estatura); // imprime 1.8
+```
+
+Existe otra forma equivalente de obtener el valor de una llave utilizando corchetes cuadrados ([]):
+
+```
+persona["nombre"]
+```
+
+Esta notación es útil para obtener los valores de forma dinámica. Por ejemplo:
+
+```
+var llave = "nombre";
+console.log(persona[llave]);
+```
+
+Primero definimos una variable **llave**, a la que le asignamos el valor **"nombre"** y utilizamos esa variable para obtener el valor. Esto va a ser útil más adelante cuando estemos recorriendo las propiedades de un objeto.
+
+
+
+
 
 ## Palabras reservadas.
 
