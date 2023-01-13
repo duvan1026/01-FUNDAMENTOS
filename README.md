@@ -130,6 +130,81 @@ Para eliminar una propiedad de un objeto utiliza el operador delete:
 delete person.peso;
 ```
 
+####  Metodos estáticos
+
+* Object.assign()
+
+   El método Object.assign() copia todas las propiedades enumerables de uno o más objetos fuente a un objeto destino. Devuelve el objeto destino.
+
+   ```
+   const target = { a: 1, b: 2 };
+   const source = { b: 4, c: 5 };
+
+   const returnedTarget = Object.assign(target, source);
+
+   console.log(target);
+   // Expected output: Object { a: 1, b: 4, c: 5 }
+
+   console.log(source);
+   // Expected output: true
+
+   console.log(returnedTarget);
+   // Expected output: true
+   ```
+
+   * Sintaxis
+
+      ```
+      Object.assign(objetivo, ...fuentes)
+      ```
+
+   *  Parámetros
+
+      * objetivo: El objeto destino.
+
+      * fuentes: Los objetos origen.
+
+   * Valor devuelto
+
+      El objeto destino.
+
+   ##### Ejemplos
+
+   * Clonando un objeto
+
+      ```
+      let obj = { a: 1 };
+      let copy = Object.assign({}, obj);
+      console.log(copy); // { a: 1 }
+      ```
+   
+   * Fusionando objetos
+
+      ```
+      var o1 = { a: 1 };
+      var o2 = { b: 2 };
+      var o3 = { c: 3 };
+
+      var obj = Object.assign(o1, o2, o3);
+      console.log(obj); // { a: 1, b: 2, c: 3 }
+      console.log(o1);  // { a: 1, b: 2, c: 3 }, target object itself is changed.
+      ```
+   
+   * Fusionando objetos con las mismas propiedades
+
+      ```
+      var o1 = { a: 1, b: 1, c: 1 };
+      var o2 = { b: 2, c: 2 };
+      var o3 = { c: 3 };
+
+      var obj = Object.assign({}, o1, o2, o3);
+      console.log(obj); // { a: 1, b: 2, c: 3 }
+      ```
+   
+   **Nota:** Para visualizar en mas profundidad este metodo por favor visite el siguiente [link](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#clonando_un_objeto).
+
+   
+
 
 
 ## Palabras reservadas.
