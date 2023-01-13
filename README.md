@@ -35,7 +35,9 @@ Las variables **var** en JavaScript se define **Undefined** si esta no ha sido p
 
 **JavaScript** es un lenguaje de programación que funciona a partir de variables. Estas variables se clasifican mediante tipos. Entonces, en JavaScript, tenemos los tipos primitivos y los tipos no primitivos.
 
-#### Datos primitivos: Los tipos primitivos en JavaScript son aquellos valores que no son un objeto y tampoco tienen métodos. Además, **los tipos primitivos son valores inmutables (no se pueden modificar)**.
+#### Datos primitivos:
+
+Los tipos primitivos en JavaScript son aquellos valores que no son un objeto y tampoco tienen métodos. Además, **los tipos primitivos son valores inmutables (no se pueden modificar)**.
 
 Existen varios tipos de datos primitivos, los cuales son:
 
@@ -51,6 +53,160 @@ Existen varios tipos de datos primitivos, los cuales son:
 
 * Symbol: Es un valor único que no es igual a ningún otro valor.
 
+
+
+#### Objetos literales:
+
+Los objetos en JavaScript nos ayudan agrupar información. Un objeto no es más que un conjunto de propiedades en donde cada propiedad está compuesta de una llave y un valor. Veamos un primer ejemplo:
+
+```
+var persona = {
+  nombre: "Germán",
+  apellido: "Escobar",
+  edad: 35,
+  estatura: 1.8
+}
+```
+
+En este ejemplo estamos creando un objeto y lo estamos almacenando en la variable persona. **Un objeto se define utilizando corchetes {}**. Las propiedades se separan con coma (,) y las llaves y valores se separan con dos puntos (:).
+
+En este objeto estamos almacenando la información de una persona, pero en un objeto podemos almacenar cualquier tipo de información que requiera esa asociación llave-valor.
+
+El valor de una propiedad puede **ser cualquier tipo de datos** en JavaScript: **números, cadenas de texto, booleanos, arreglos e incluso funciones y otros objetos**.
+
+##### Obteniendo valores de un objeto
+
+Para obtener el nombre de la persona en el objeto que definimos previamente lo haríamos utilizando persona.nombre. Por ejemplo:
+
+```
+console.log(persona.nombre);
+```
+
+Para obtener el valor de una llave en un objeto utilizamos la notación punto (.): el nombre de la variable, seguido de punto, seguido del nombre de la llave:
+
+```
+console.log(persona.nombre); // imprime Germán
+console.log(persona.apellido); // imprime Escobar
+console.log(persona.edad); // imprime 35
+console.log(persona.estatura); // imprime 1.8
+```
+
+Existe otra forma equivalente de obtener el valor de una llave utilizando corchetes cuadrados ([]):
+
+```
+persona["nombre"]
+```
+
+Esta notación es útil para obtener los valores de forma dinámica. Por ejemplo:
+
+```
+var llave = "nombre";
+console.log(persona[llave]);
+```
+
+Primero definimos una variable **llave**, a la que le asignamos el valor **"nombre"** y utilizamos esa variable para obtener el valor. Esto va a ser útil más adelante cuando estemos recorriendo las propiedades de un objeto.
+
+##### Agregando nuevas propiedades al objeto
+
+Es posible agregar más propiedades a un objeto después de que ha sido creado. Por ejemplo, podríamos agregar una propiedad con llave peso y valor 70 de la siguiente forma:
+
+```
+persona.peso = 70;
+```
+
+##### Modificando propiedades del objeto
+
+Es también posible modificar los valores de las propiedades de un objeto. Por ejemplo, si queremos cambiar el valor de la llave peso lo podemos hacer de la siguiente forma:
+
+```
+persona.peso = 65;
+```
+
+##### Eliminando propiedades de un objeto
+
+Para eliminar una propiedad de un objeto utiliza el operador delete:
+
+```
+delete person.peso;
+```
+
+####  Metodos estáticos
+
+* Object.assign()
+
+   El método Object.assign() copia todas las propiedades enumerables de uno o más objetos fuente a un objeto destino. Devuelve el objeto destino.
+
+   ```
+   const target = { a: 1, b: 2 };
+   const source = { b: 4, c: 5 };
+
+   const returnedTarget = Object.assign(target, source);
+
+   console.log(target);
+   // Expected output: Object { a: 1, b: 4, c: 5 }
+
+   console.log(source);
+   // Expected output: true
+
+   console.log(returnedTarget);
+   // Expected output: true
+   ```
+
+   * Sintaxis
+
+      ```
+      Object.assign(objetivo, ...fuentes)
+      ```
+
+   *  Parámetros
+
+      * objetivo: El objeto destino.
+
+      * fuentes: Los objetos origen.
+
+   * Valor devuelto
+
+      El objeto destino.
+
+   ##### Ejemplos
+
+   * Clonando un objeto
+
+      ```
+      let obj = { a: 1 };
+      let copy = Object.assign({}, obj);
+      console.log(copy); // { a: 1 }
+      ```
+   
+   * Fusionando objetos
+
+      ```
+      var o1 = { a: 1 };
+      var o2 = { b: 2 };
+      var o3 = { c: 3 };
+
+      var obj = Object.assign(o1, o2, o3);
+      console.log(obj); // { a: 1, b: 2, c: 3 }
+      console.log(o1);  // { a: 1, b: 2, c: 3 }, target object itself is changed.
+      ```
+   
+   * Fusionando objetos con las mismas propiedades
+
+      ```
+      var o1 = { a: 1, b: 1, c: 1 };
+      var o2 = { b: 2, c: 2 };
+      var o3 = { c: 3 };
+
+      var obj = Object.assign({}, o1, o2, o3);
+      console.log(obj); // { a: 1, b: 2, c: 3 }
+      ```
+   
+   **Nota:** Para visualizar en mas profundidad este metodo por favor visite el siguiente [link](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#clonando_un_objeto).
+
+   
+
+
+
 ## Palabras reservadas.
 
 Las palabras reservadas y la estructura correcta de los identificadores son algo importante, debemos conocer cuales son y evitar su uso, incluso en aquellos casos donde son aceptadas para algún tipo de artefacto del lenguaje. Aunque los editores modernos suelen avisar de que nos estamos equivocando, son muchas las ocasiones donde perdemos tiempo intentando comprender que está pasando porque hemos utilizado una palabra reservada sin darnos cuenta, por lo cual, las palabras reservadas **son palabras que tienen un uso específico para el cual fueron creadas**.
@@ -62,7 +218,7 @@ En la siguiente imagen se evidencian alguna palabras reservadas y palabras que s
 En el siguiente [link](https://mothereff.in/js-variables#%E0%B2%A0%5f%E0%B2%A0), podemos verificar si la palabra a implementar es aceptada por la sintasis del lenguaje de javaScript.
 
 
-## Estandar para nombrar variables
+### Estandar para nombrar variables
 
 * No pueden crear nombres de variables que empiecen con números,punto entre medio del nombre, entre otros, como por ejemplo:
 
