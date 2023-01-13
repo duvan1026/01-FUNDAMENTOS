@@ -297,6 +297,73 @@ El método pop() **elimina el último elemento de un array y lo devuelve**. Este
    console.log(popped); // 'sturgeon'
    ```
 
+#### Splice()
+
+El método splice() **cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos**.
+
+##### Sintaxis
+   
+   ```
+   array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+   ```
+
+* Parámetros
+
+      * start 
+         Índice donde se comenzará a cambiar el array (con 0 como origen). Si es mayor que la longitud del array, el punto inicial será la longitud del array. Si es negativo, empezará esa cantidad de elementos contando desde el final.
+
+      * deleteCount Opcional
+         Un entero indicando el número de elementos a eliminar del array antiguo.
+
+         Si deleteCount se omite, o si su valor es mayor que arr.length - start (esto significa, si es mayor que el número de elementos restantes del array, comenzando desde start), entonces todos los elementos desde start hasta el final del array serán eliminados.
+
+         Si deleteCount es igual a 0 o negativo, no se eliminará ningún elemento. En este caso, se debe especificar al menos un nuevo elemento (ver más abajo).
+
+      * item1, item2, ... Opcional
+         Los elementos que se agregarán al array, empezando en el índice start. Si no se especifica ningún elemento, splice() solamente eliminará elementos del array.
+
+* Valor devuelto
+
+   Un array que contiene los elementos eliminados. Si sólo se ha eliminado un elemento, devuelve un array con un solo elemento. Si no se ha eliminado ningún elemento, devuelve un array vacío.
+
+##### Ejemplo.
+
+* Eliminar 0 elementos desde el índice 2 e insertar "drum"
+
+   ```
+   var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+   var removed = myFish.splice(2, 0, 'drum');
+
+   // myFish is ["angel", "clown", "drum", "mandarin", "sturgeon"]
+   // removed is [], no elements removed
+   ```
+
+* Eliminar 1 elemento desde el índice 3
+
+   ```
+   var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
+   var removed = myFish.splice(3, 1);
+
+   // removed is ["mandarin"]
+   // myFish is ["angel", "clown", "drum", "sturgeon"]
+   ```
+
+
+* Eliminar 2 elementos desde el índice 0 e insertar "parrot", "anemone" y "blue"
+
+   ```
+   var myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
+   var removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
+
+   // myFish is ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
+   // removed is ["angel", "clown"]
+   ```
+
+
+
+
+
+
 
 ## Recomendaciones:
 
