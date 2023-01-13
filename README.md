@@ -234,6 +234,40 @@ El método push() **añade uno o más elementos al final de un array** y devuelv
    console.log(total);  // 4
    ```
 
+#### unshift()
+
+El método unshift() **agrega uno o más elementos al inicio del array**, y devuelve la nueva longitud del array.
+
+#### Sintaxis
+
+   ```
+   arr.unshift(elemento1[, ...[, elementoN]])
+   ```
+
+* Parámetros
+   
+   **elementoN** : Elementos a agregar al inicio del array.
+
+* Devuelve
+   
+   La nueva propiedad length del objeto sobre el cual el método fue llamado.
+
+#### Ejemplos
+
+   ```
+   var arr = [1, 2];
+
+   arr.unshift(0); // resultado de la llamada es 3, la nueva longitud del array
+   // arr es [0, 1, 2]
+
+   arr.unshift(-2, -1); // = 5
+   // arr es [-2, -1, 0, 1, 2]
+
+   arr.unshift([-3]);
+   // arr es [[-3], -2, -1, 0, 1, 2]
+   ```
+
+
 
 
 
