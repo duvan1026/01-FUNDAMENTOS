@@ -204,7 +204,47 @@ delete person.peso;
    **Nota:** Para visualizar en mas profundidad este metodo por favor visite el siguiente [link](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#clonando_un_objeto).
 
    
+* Object.assign()
 
+   El método Object.create() **crea un objeto nuevo**, utilizando un **objeto existente** como el prototipo del nuevo objeto creado.
+
+   ```
+   const person = {
+   isHuman: false,
+   printIntroduction: function() {
+      console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+      }
+   };
+
+   const me = Object.create(person);
+
+   me.name = 'Matthew'; // "name" is a property set on "me", but not on "person"
+   me.isHuman = true; // Inherited properties can be overwritten
+
+   me.printIntroduction();
+   // Expected output: "My name is Matthew. Am I human? true"
+   ```
+
+   * Sintaxis
+
+      ```
+      Object.create(proto[, propertiesObject])
+      ```
+   * Parámetros
+      
+      * proto: Objeto el cual debe ser el prototipo del nuevo objeto creado.
+      
+      * propertiesObject : (Opcional) Si se especifica y no es undefined, un objeto cuyas propiedades enumerables propias (es decir, aquellas propiedades definidas sobre si mismo y no son propiedades enumerable a lo largo de su cadena de prototipos) espefica descriptores de propiedad para ser agregadas al objeto recien creado, con los nombres de propiedad correspondiente. Estas propiedades corresponden al segundo argumento de Object.defineProperties.
+
+   * Valor devuelto
+
+      Un nuevo objeto con el prototipo y propiedades del objeto especificado.
+
+   * Excepciones
+      
+      Una excepción TypeError si el parámetro propertiesObject es null o un objeto envolvente no primitivo.
+   
+   
 
 
 ## Palabras reservadas.
