@@ -244,6 +244,65 @@ delete person.peso;
       
       Una excepción TypeError si el parámetro propertiesObject es null o un objeto envolvente no primitivo.
    
+   ##### Ejemplos
+
+   * Herencia clásica con Object.create()
+
+      Debajo se encuentra un ejemplo de cómo usar Object.create() para lograr herencia clásica. Este es para herencia simple, la cual es todo lo que soporta JavaScript.
+
+      ```
+      // Shape - superclase
+      function Shape() {
+      this.x = 0;
+      this.y = 0;
+      }
+
+      // método de la superclase
+      Shape.prototype.move = function(x, y) {
+         this.x += x;
+         this.y += y;
+         console.info("Shape moved.");
+      };
+
+      // Rectangle - subclase
+      function Rectangle() {
+      Shape.call(this); // llama al contructor de la superclase.
+      }
+
+      // subclase extiende superclase
+      Rectangle.prototype = Object.create(Shape.prototype);
+      Rectangle.prototype.constructor = Rectangle;
+
+      var rect = new Rectangle();
+
+      console.log('¿Es rect una instancia de Rectangle?',
+      rect instanceof Rectangle); // true
+      console.log('¿Es rect una instancia de Shape?',
+      rect instanceof Shape); // true
+      rect.move(1, 1); // Imprime, 'Shape moved.'
+      ```
+
+      Si desea heredar desde múltiples objetos, entonces los mixins son una posibilidad.
+
+      ```
+      function MyClass() {
+      SuperClass.call(this);
+      OtherSuperClass.call(this);
+      }
+
+      // inherit one class
+      MyClass.prototype = Object.create(SuperClass.prototype);
+      // mixin another
+      Object.assign(MyClass.prototype, OtherSuperClass.prototype);
+      // re-assign constructor
+      MyClass.prototype.constructor = MyClass;
+
+      MyClass.prototype.myMethod = function() {
+      // do something
+      };
+      ```
+
+    **Nota:** Para visualizar en mas profundidad este metodo por favor visite el siguiente [link](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#clonando_un_objeto).     
    
 
 
