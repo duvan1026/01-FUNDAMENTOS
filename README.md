@@ -339,9 +339,7 @@ delete person.peso;
 
          **Nota:** Para visualizar en mas profundidad este metodo por favor visite el siguiente [link](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties). 
 
-
-
-
+Para profundizar y observas mas sobre estos momentos puedes ingresar al siguiente [link](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object).
 
 
 ## Palabras reservadas.
