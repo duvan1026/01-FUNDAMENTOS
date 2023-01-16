@@ -2,6 +2,9 @@
 function saludar( nombre ) {
     console.log( arguments );
     console.log('Hola ' + nombre);
+    return 10;
+
+    console.log('Soy un codifo que está despúes del return'); // esta linea no se ejecutará
 };
 
 // Funcion anonima - indica que la función respondera al nombre de "saludar2"
@@ -21,7 +24,8 @@ const saludarFlecha2 = ( nombre )  => {
     console.log('Hola ' + nombre);
 }
 
-saludar( "Duvan", 40, true, 'Costa Rica' );
+const retornoSaludar = saludar( "Duvan", 40, true, 'Costa Rica' ); // 1
+console.log({ retornoSaludar });
 // saludar2( "Duvan Castro" );
 
 saludarFlecha();
