@@ -830,7 +830,7 @@ ___
       // manyMoreArgs, [three, four, five, six]
       ```
 
-* Sintaxis Spread
+* Sintaxis **Spread**
 
    La sintaxis extendida o spread syntax permite a un elemento iterable tal como un arreglo o cadena ser expandido en lugares donde cero o más argumentos (para llamadas de función) o elementos (para Array literales) son esperados, o a un objeto ser expandido en lugares donde cero o más pares de valores clave (para literales Tipo Objeto) son esperados.
 
