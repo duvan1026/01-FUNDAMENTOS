@@ -46,6 +46,19 @@ const sumar2 = ( a,b ) => a + b;
 
 
 
+function getAleatorio() {
+    return Math.random();
+};
 
-console.log( sumar(1,2) );
-console.log( sumar2(1,2) );
+// Ejercicio
+// 1. transformar la funcion getAleatorio(), 
+// en funcion de flecha
+
+const getAleatorio2 = () => Math.random();
+
+
+
+
+console.log( getAleatorio2() );
+// console.log( sumar(1,2) );
+// console.log( sumar2(1,2) );
