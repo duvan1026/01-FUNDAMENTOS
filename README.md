@@ -690,9 +690,11 @@ El método indexOf() **retorna el primer índice en el que se puede encontrar un
    array.indexOf(2, -3); // 0
    ```
 
+___
 
+### Funciones.
 
-
+El objetivo principal es centralizar la lógica de un procedimiento que se requiera utilizar varias veces
 
 
 
