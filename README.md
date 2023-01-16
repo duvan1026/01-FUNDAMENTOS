@@ -337,9 +337,15 @@ delete person.peso;
          });
          ```
 
-         **Nota:** Para visualizar en mas profundidad este metodo por favor visite el siguiente [link](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties). 
+         **Nota:** Para visualizar en mas profundidad este metodo por favor visite el siguiente [link](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties).
+
+    
 
 Para profundizar y observas mas sobre estos momentos puedes ingresar al siguiente [link](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object).
+
+
+
+___
 
 
 ## Palabras reservadas.
@@ -775,6 +781,56 @@ ___
   Posterior a ello, se deben colocar al final del archivo html y asi evitando que al ejecutarse el archivo se genere algun bloquee o demora en la ejecución del mismo.
 
 * Al nombrar los archivos se debe tener en cuenta que debe ser separado los nombres con un guion (primer-aplicativo), evitando colocar espacios, caracteres especial y mayusculas, teniendo en cuenta que la gran mayoria de servidores funcionan con base a linux.
+
+
+* Parametro **REST**
+
+   La sintaxis de los parámetros rest nos permiten representar un número indefinido de argumentos como un array.
+
+      ```
+      function sum(...theArgs) {
+      let total = 0;
+      for (const arg of theArgs) {
+         total += arg;
+      }
+      return total;
+      }
+
+      console.log(sum(1, 2, 3));
+      // Expected output: 6
+
+      console.log(sum(1, 2, 3, 4));
+      // Expected output: 10
+      ```
+
+   * Sintaxis
+
+      ```
+      function(a, b, ...theArgs) {
+      // ...
+      }
+      ```
+
+      El último parámetro de una función se puede prefijar con **...**, lo que hará que todos los argumentos restantes (suministrados por el usuario) se coloquen dentro de un array de javascript "estándar".
+
+      Sólo el último parámetro puede ser un "parámetro rest".
+
+      ```
+      function myFun(a, b, ...manyMoreArgs) {
+      console.log("a", a);
+      console.log("b", b);
+      console.log("manyMoreArgs", manyMoreArgs);
+      }
+
+      myFun("one", "two", "three", "four", "five", "six");
+
+      // Console Output:
+      // a, one
+      // b, two
+      // manyMoreArgs, [three, four, five, six]
+      ```
+
+
 
 ___
 
