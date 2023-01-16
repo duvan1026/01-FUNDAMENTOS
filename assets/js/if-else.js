@@ -10,3 +10,12 @@ if( a >= 10 ) { // undefined, null, una asignación, son exepciones
 };
 
 // console.log('Fin del programa');
+
+const hoy = new Date(); // new => sirve para crear instancias o nuevos objetos.
+let dia = hoy.getDay(); // 0: Domingo, 1: lunes, 2: martes ......
+
+console.log({ dia });
+
+if( dia === 0 ) {
+    
+}
