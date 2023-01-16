@@ -830,8 +830,73 @@ ___
       // manyMoreArgs, [three, four, five, six]
       ```
 
+* Sintaxis Spread
 
+   La sintaxis extendida o spread syntax permite a un elemento iterable tal como un arreglo o cadena ser expandido en lugares donde cero o más argumentos (para llamadas de función) o elementos (para Array literales) son esperados, o a un objeto ser expandido en lugares donde cero o más pares de valores clave (para literales Tipo Objeto) son esperados.
 
+   ```
+   function sum(x, y, z) {
+   return x + y + z;
+   }
+
+   const numbers = [1, 2, 3];
+
+   console.log(sum(...numbers));
+   // Expected output: 6
+
+   console.log(sum.apply(null, numbers));
+   // Expected output: 6
+   ```
+
+   * Sintaxis
+
+      Para llamadas de funciones:
+
+      ```
+      myFunction(...iterableObj);
+      ```
+
+      Para arreglos literales o cadenas de caracteres:
+
+      ```
+      [...iterableObj, '4', 'five', 6];
+      ```
+
+      Para objetos literales (nuevo en ECMAScript 2018):
+
+      ```
+      let objClone = { ...obj };
+      ```
+
+   * Ejemplos
+      
+       * Spread en llamadas de función
+
+         * Reemplaza "apply"
+            
+            Es frecuente usar Function.prototype.apply en casos donde quieres usar los elementos de un arreglo como argumentos de una función.
+
+            ```
+            function myFunction(x, y, z) { }
+            var args = [0, 1, 2];
+            myFunction.apply(null, args);
+            ```
+
+            Con la sintaxis expandida (spread syntax), el código anterior puede ser escrito como:
+
+            ```
+            function myFunction(x, y, z) { }
+            var args = [0, 1, 2];
+            myFunction(...args);
+            ```
+
+            Cualquier argumento en la lista de argumentos puede usar la sintáxis expandida y esto puede ser usado varias veces.
+
+            ```
+            function myFunction(v, w, x, y, z) { }
+            var args = [0, 1];
+            myFunction(-1, ...args, 2, ...[3]);
+            ```
 ___
 
 ## Importante.
