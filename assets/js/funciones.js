@@ -16,7 +16,13 @@ const saludarFlecha = () => {
     console.log('Hola Flecha');
 }
 
+// Funciones de flecha con argumentos, los () son opcionales, pero es buena practica implementarlo.
+const saludarFlecha2 = ( nombre )  => {
+    console.log('Hola ' + nombre);
+}
+
 saludar( "Duvan", 40, true, 'Costa Rica' );
 // saludar2( "Duvan Castro" );
 
 saludarFlecha();
+saludarFlecha2( 'Melissa' );
