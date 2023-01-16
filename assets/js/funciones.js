@@ -11,5 +11,12 @@ const saludar2 = function( nombre ) {
 };
 
 
+// Funciones de flecha -- introducido en el emac-script 6 o javascript 2015
+const saludarFlecha = () => {
+    console.log('Hola Flecha');
+}
+
 saludar( "Duvan", 40, true, 'Costa Rica' );
 // saludar2( "Duvan Castro" );
+
+saludarFlecha();
