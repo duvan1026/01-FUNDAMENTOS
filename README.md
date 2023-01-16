@@ -305,6 +305,42 @@ delete person.peso;
     **Nota:** Para visualizar en mas profundidad este metodo por favor visite el siguiente [link](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#clonando_un_objeto).     
    
 
+* Object.defineProperties()
+
+   El metodo Object.defineProperties() **define nuevas o modifica propiedades existentes** directamente en el objeto, retornando el objeto.
+
+   * Sintáxis
+
+      ```
+      Object.defineProperties(obj, propiedades)
+      ```
+   
+   * Parámetros
+
+      * obj : El objeto sobre el cual se crearán o modificaran sus propiedades.
+
+      * propiedades: Un objeto cuyas propiedades enumerables propias consituyen descriptores para las propiedades a ser definidas o modificadas.
+
+      ##### Ejemplo
+
+         ```
+         Object.defineProperties(obj, {
+         "property1": {
+            value: true,
+            writable: true
+         },
+         "property2": {
+            value: "Hello",
+            writable: false
+         }
+         // etc. etc.
+         });
+         ```
+
+         **Nota:** Para visualizar en mas profundidad este metodo por favor visite el siguiente [link](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties). 
+
+Para profundizar y observas mas sobre estos momentos puedes ingresar al siguiente [link](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object).
+
 
 ## Palabras reservadas.
 
@@ -654,11 +690,65 @@ El método indexOf() **retorna el primer índice en el que se puede encontrar un
    array.indexOf(2, -3); // 0
    ```
 
+___
+
+### Funciones.
+
+Las funciones son uno de los bloques de construcción fundamentales en JavaScript. **Una función en JavaScript es similar a un procedimiento** — un conjunto de instrucciones que realiza una tarea o calcula un valor, pero para que un procedimiento califique como función, debe tomar alguna entrada y devolver una salida donde hay alguna relación obvia entre la entrada y la salida. Para usar una función, debes **definirla en algún lugar del ámbito desde el que deseas llamarla**.
+
+**El objetivo principal es centralizar la lógica de un procedimiento que se requiera utilizar varias veces**.
+
+* Definir funciones
+
+   * Declaración de función
+
+      Una definición de función (también denominada declaración de función o expresión de función) consta de la palabra clave **function**, seguida de:
+
+         * El nombre de la función.
+         * Una lista de parámetros de la función, entre paréntesis y separados por comas.
+         * Las declaraciones de JavaScript que definen la función, encerradas entre llaves, { ... }.
+
+      Por ejemplo, el siguiente código define una función simple llamada square ("cuadrado"):
+
+          ```
+         function square(number) {
+         return number * number;
+         }
+          ```
+      La función square toma un parámetro, llamado **number**. La función consta de una declaración que dice devuelva el parámetro de la función (es decir, number) multiplicado por sí mismo. La instrucción **return especifica el valor devuelto por la función**:
+
+          ```
+          return number * number;
+          ```
+
+   * Llamar funciones
+
+      Definir una función no la ejecuta. Definirla simplemente nombra la función y especifica qué hacer cuando se llama a la función.
+
+      Llamar a la función en realidad lleva a cabo las acciones especificadas con los parámetros indicados. Por ejemplo, si defines la función square, podrías llamarla de la siguiente manera:
+
+         ```
+         square(5);
+         ```
 
 
+      La declaración anterior llama a la función con un argumento de 5. La función ejecuta sus declaraciones y devuelve el valor 25.
 
+      Las funciones deben estar dentro del ámbito cuando se llaman, pero la declaración de la función se puede elevar (cuando aparece debajo de la llamada en el código), como en este ejemplo:
 
+         ```
+         console.log(square(5));
+         /* ... */
+         function square(n) {
+         return n * n;
+         }
+         ```
 
+      El ámbito de una función es la función en la que se declara (o el programa completo, si se declara en el nivel superior).
+
+      En el siguiente [link](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Functions#definir_funciones), podemos encontrar información mas detallada sobre funciones.
+
+___
 
 ## Recomendaciones:
 
@@ -686,8 +776,7 @@ El método indexOf() **retorna el primer índice en el que se puede encontrar un
 
 * Al nombrar los archivos se debe tener en cuenta que debe ser separado los nombres con un guion (primer-aplicativo), evitando colocar espacios, caracteres especial y mayusculas, teniendo en cuenta que la gran mayoria de servidores funcionan con base a linux.
 
-
-
+___
 
 ## Importante.
 
