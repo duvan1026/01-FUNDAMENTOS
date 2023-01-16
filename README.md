@@ -305,6 +305,27 @@ delete person.peso;
     **Nota:** Para visualizar en mas profundidad este metodo por favor visite el siguiente [link](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#clonando_un_objeto).     
    
 
+* Object.defineProperties()
+
+   El metodo Object.defineProperties() **define nuevas o modifica propiedades existentes** directamente en el objeto, retornando el objeto.
+
+   * Sintáxis
+
+      ```
+      Object.defineProperties(obj, propiedades)
+      ```
+   
+   * Parámetros
+
+      * obj : El objeto sobre el cual se crearán o modificaran sus propiedades.
+
+      * propiedades: Un objeto cuyas propiedades enumerables propias consituyen descriptores para las propiedades a ser definidas o modificadas.
+
+
+
+
+
+
 
 ## Palabras reservadas.
 
