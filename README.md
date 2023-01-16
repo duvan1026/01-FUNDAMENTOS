@@ -321,6 +321,23 @@ delete person.peso;
 
       * propiedades: Un objeto cuyas propiedades enumerables propias consituyen descriptores para las propiedades a ser definidas o modificadas.
 
+      ##### Ejemplo
+
+         ```
+         Object.defineProperties(obj, {
+         "property1": {
+            value: true,
+            writable: true
+         },
+         "property2": {
+            value: "Hello",
+            writable: false
+         }
+         // etc. etc.
+         });
+         ```
+
+         **Nota:** Para visualizar en mas profundidad este metodo por favor visite el siguiente [link](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties). 
 
 
 
