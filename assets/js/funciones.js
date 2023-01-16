@@ -1,5 +1,6 @@
-
+// Función tradicional
 function saludar( nombre ) {
+    console.log( arguments );
     console.log('Hola ' + nombre);
 };
 
@@ -10,5 +11,5 @@ const saludar2 = function( nombre ) {
 };
 
 
-saludar( "Duvan" );
-saludar2( "Duvan Castro" );
+saludar( "Duvan", 40, true, 'Costa Rica' );
+// saludar2( "Duvan Castro" );
