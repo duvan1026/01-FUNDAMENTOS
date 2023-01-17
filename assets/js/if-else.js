@@ -56,5 +56,10 @@ if( dia === 0 ) {
 // console.log( diaLetras[dia1]() ); // Ejecuta una función de flecha en cada posicion del objeto
 
 
+ //************** */ Solución con Arreglos******************
+ const diaLetras = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado',];
 
+ // día de la semana
+ console.log( diaLetras[dia1]);
+ 
 
