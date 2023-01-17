@@ -34,3 +34,27 @@ if( dia === 0 ) {
 } else{
     console.log(' No es lunes, martes o domingo ...')
 }
+
+
+// Sin usar if else, o switch, unicamente objetos
+ let dia1 = 6; // 0: domingo, 1: lunes....
+
+ //************** */ Solución con Objetos******************
+ // Manejo de funciones de flecha independientes en cada posicion del objeto
+// const diaLetras = {
+//     0: ()=> 'Domingo - 0',
+//     1: ()=> 'Lunes - 1',
+//     2: ()=> 'Martes - 2',
+//     3: ()=> 'Miercoles - 3',
+//     4: ()=> 'Jueves - 4',
+//     5: ()=> 'Viernes - 5',
+//     6: ()=> 'Sabado - 6',
+// }
+
+// día de la semana
+// console.log( diaLetras[dia1] || 'Dia no es valido'); // Permite evaluar si esta recibiendo un dato valido, sino, envia mensaje 'Dia no valido'
+// console.log( diaLetras[dia1]() ); // Ejecuta una función de flecha en cada posicion del objeto
+
+
+
+
