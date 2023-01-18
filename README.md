@@ -337,9 +337,15 @@ delete person.peso;
          });
          ```
 
-         **Nota:** Para visualizar en mas profundidad este metodo por favor visite el siguiente [link](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties). 
+         **Nota:** Para visualizar en mas profundidad este metodo por favor visite el siguiente [link](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties).
+
+    
 
 Para profundizar y observas mas sobre estos momentos puedes ingresar al siguiente [link](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object).
+
+
+
+___
 
 
 ## Palabras reservadas.
@@ -776,6 +782,121 @@ ___
 
 * Al nombrar los archivos se debe tener en cuenta que debe ser separado los nombres con un guion (primer-aplicativo), evitando colocar espacios, caracteres especial y mayusculas, teniendo en cuenta que la gran mayoria de servidores funcionan con base a linux.
 
+
+* Parametro **REST**
+
+   La sintaxis de los parámetros rest nos permiten representar un número indefinido de argumentos como un array.
+
+      ```
+      function sum(...theArgs) {
+      let total = 0;
+      for (const arg of theArgs) {
+         total += arg;
+      }
+      return total;
+      }
+
+      console.log(sum(1, 2, 3));
+      // Expected output: 6
+
+      console.log(sum(1, 2, 3, 4));
+      // Expected output: 10
+      ```
+
+   * Sintaxis
+
+      ```
+      function(a, b, ...theArgs) {
+      // ...
+      }
+      ```
+
+      El último parámetro de una función se puede prefijar con **...**, lo que hará que todos los argumentos restantes (suministrados por el usuario) se coloquen dentro de un array de javascript "estándar".
+
+      Sólo el último parámetro puede ser un "parámetro rest".
+
+      ```
+      function myFun(a, b, ...manyMoreArgs) {
+      console.log("a", a);
+      console.log("b", b);
+      console.log("manyMoreArgs", manyMoreArgs);
+      }
+
+      myFun("one", "two", "three", "four", "five", "six");
+
+      // Console Output:
+      // a, one
+      // b, two
+      // manyMoreArgs, [three, four, five, six]
+      ```
+
+* Sintaxis **Spread**
+
+   La sintaxis extendida o spread syntax permite a un elemento iterable tal como un arreglo o cadena ser expandido en lugares donde cero o más argumentos (para llamadas de función) o elementos (para Array literales) son esperados, o a un objeto ser expandido en lugares donde cero o más pares de valores clave (para literales Tipo Objeto) son esperados.
+
+   ```
+   function sum(x, y, z) {
+   return x + y + z;
+   }
+
+   const numbers = [1, 2, 3];
+
+   console.log(sum(...numbers));
+   // Expected output: 6
+
+   console.log(sum.apply(null, numbers));
+   // Expected output: 6
+   ```
+
+   * Sintaxis
+
+      Para llamadas de funciones:
+
+      ```
+      myFunction(...iterableObj);
+      ```
+
+      Para arreglos literales o cadenas de caracteres:
+
+      ```
+      [...iterableObj, '4', 'five', 6];
+      ```
+
+      Para objetos literales (nuevo en ECMAScript 2018):
+
+      ```
+      let objClone = { ...obj };
+      ```
+
+   * Ejemplos
+      
+       * Spread en llamadas de función
+
+         * Reemplaza "apply"
+            
+            Es frecuente usar Function.prototype.apply en casos donde quieres usar los elementos de un arreglo como argumentos de una función.
+
+            ```
+            function myFunction(x, y, z) { }
+            var args = [0, 1, 2];
+            myFunction.apply(null, args);
+            ```
+
+            Con la sintaxis expandida (spread syntax), el código anterior puede ser escrito como:
+
+            ```
+            function myFunction(x, y, z) { }
+            var args = [0, 1, 2];
+            myFunction(...args);
+            ```
+
+            Cualquier argumento en la lista de argumentos puede usar la sintáxis expandida y esto puede ser usado varias veces.
+
+            ```
+            function myFunction(v, w, x, y, z) { }
+            var args = [0, 1];
+            myFunction(-1, ...args, 2, ...[3]);
+            ```
 ___
 
 ## Importante.
