@@ -3,9 +3,15 @@
 
 class Persona {
 
+    // Los metodos o atributos staticos pueden ser accedidos sin necesidad de crear una instancia.
     static _conteo = 0;
     static get conteo() {
         return Persona._conteo + ' instancias';
+    }
+
+    static mensaje () {
+        console.log( this.nombre ); // undefined
+        console.log( 'hola a todos, soy un mensaje statico' );
     }
 
     //'use strict'  viene por defecto implementado en las clases en JS
@@ -61,5 +67,5 @@ spiderman.setComidaFavorita = 'El pie de cereza de la tía May';
 // Persona._conteo = 2;
 console.log('Conteo statico : ', Persona._conteo );
 console.log( Persona.conteo );
-
+Persona.mensaje();
 
