@@ -7,6 +7,7 @@ class Persona {
     nombre = '' ;
     codigo = '' ;
     frase  = '' ;
+    comida = '' ;
 
     constructor( nombre = 'Sin nombre', codigo = 'Sin codigo', frase = 'Sin frase' ) {
 
@@ -14,6 +15,13 @@ class Persona {
         this.nombre = nombre;
         this.frase  = frase;
     }
+
+    set setComidaFavorita( comida ) {
+        this.comida = comida;
+    }
+
+
+
 
     //Metodo
     quienSoy() {
@@ -28,11 +36,15 @@ class Persona {
 
 const spiderman = new Persona('peter Parker', 'Spiderman', 'Soy tu amigable vecino Spiderman' );
 const ironman = new Persona('Tony Stark', 'Ironman', 'Yo soy Ironman' );
-
-console.log( spiderman );
-console.log( ironman );
+// console.log( ironman );
 
 spiderman.quienSoy();
-ironman.miFrase();
+// ironman.miFrase();
+
+spiderman.setComidaFavorita = 'El pie de cereza de la tía May';
+// spiderman.comida = 'Duende Verde'; // cambia el valor de la propieda comida ( No es una buena practica )
+
+console.log( spiderman );
+
 
 
