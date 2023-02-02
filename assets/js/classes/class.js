@@ -8,9 +8,7 @@ class Persona {
     codigo = '' ;
     frase  = '' ;
 
-    constructor( nombre, codigo, frase ) {
-
-        if( !nombre )  throw Error('Necesitamos el nombre');
+    constructor( nombre = 'Sin nombre', codigo = 'Sin codigo', frase = 'Sin frase' ) {
 
         this.codigo = codigo;
         this.nombre = nombre;
@@ -19,5 +17,5 @@ class Persona {
 
 }
 
-const spiderman = new Persona();
+const spiderman = new Persona( );
 console.log( spiderman );
