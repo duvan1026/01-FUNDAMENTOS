@@ -20,6 +20,10 @@ class Persona {
         this.comida = comida;
     }
 
+    get getComidaFavorita() {
+        return `La comida favorita de ${ this.nombre } es ${this.comida }`;
+    }
+
 
 
 
@@ -44,6 +48,7 @@ spiderman.quienSoy();
 spiderman.setComidaFavorita = 'El pie de cereza de la tía May';
 // spiderman.comida = 'Duende Verde'; // cambia el valor de la propieda comida ( No es una buena practica )
 
+console.log( spiderman.getComidaFavorita );
 console.log( spiderman );
 
 
