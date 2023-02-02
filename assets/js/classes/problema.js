@@ -21,7 +21,7 @@ const Pedro = {
 
 // fher.imprimir();
 
-
+// Esto se debe crear con una palabra new
 function Persona(  nombre, edad ) { // Genrador de Instancia
     console.log('Se ejecuto esta línea');
 
@@ -36,5 +36,7 @@ function Persona(  nombre, edad ) { // Genrador de Instancia
 
 
 const maria = new Persona( 'Maria', 19);// "new "Genrador de Instancia
+const melissa = new Persona( 'Melissa',35 );
 console.log(maria);
 maria.imprimir();
+melissa.imprimir();
