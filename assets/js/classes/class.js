@@ -3,6 +3,11 @@
 
 class Persona {
 
+    static _conteo = 0;
+    static get conteo() {
+        return Persona._conteo + ' instancias';
+    }
+
     //'use strict'  viene por defecto implementado en las clases en JS
     nombre = '' ;
     codigo = '' ;
@@ -14,6 +19,8 @@ class Persona {
         this.codigo = codigo;
         this.nombre = nombre;
         this.frase  = frase;
+
+        Persona._conteo++;
     }
 
     set setComidaFavorita( comida ) {
@@ -23,9 +30,6 @@ class Persona {
     get getComidaFavorita() {
         return `La comida favorita de ${ this.nombre } es ${this.comida }`;
     }
-
-
-
 
     //Metodo
     quienSoy() {
@@ -39,17 +43,23 @@ class Persona {
 }
 
 const spiderman = new Persona('peter Parker', 'Spiderman', 'Soy tu amigable vecino Spiderman' );
-const ironman = new Persona('Tony Stark', 'Ironman', 'Yo soy Ironman' );
+const ironman   = new Persona('Tony Stark', 'Ironman', 'Yo soy Ironman' );
 // console.log( ironman );
 
-spiderman.quienSoy();
+
+
+spiderman.miFrase();
 // ironman.miFrase();
 
 spiderman.setComidaFavorita = 'El pie de cereza de la tía May';
 // spiderman.comida = 'Duende Verde'; // cambia el valor de la propieda comida ( No es una buena practica )
 
-console.log( spiderman.getComidaFavorita );
-console.log( spiderman );
+// console.log( spiderman.getComidaFavorita );
+// console.log( spiderman );
 
+
+// Persona._conteo = 2;
+console.log('Conteo statico : ', Persona._conteo );
+console.log( Persona.conteo );
 
 
