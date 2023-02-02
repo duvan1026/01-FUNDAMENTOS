@@ -17,7 +17,7 @@ class Persona {
     }
 
     set setComidaFavorita( comida ) {
-        this.comida = comida;
+        this.comida = comida.toUpperCase(); // toUpperCase() => todo lo que reciba lo pasa a MAYUSCULA
     }
 
     get getComidaFavorita() {
