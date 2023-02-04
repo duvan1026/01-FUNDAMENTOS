@@ -899,6 +899,15 @@ ___
             ```
 ___
 
+## Bundlers
+
+Un bundler “empaquetador” nos ayuda a empaquetar todo el codigo de nuestro projecto (html, css, js), para que nosotros podamos subirlo a produccion, es decir al dominio que tenemos en Internet.
+
+Hay maneras diferentes de empaquetar, pero para hacerlo de manera efectiva se suele usar “loaders” y “extensiones” que ayudan a optimizar el codigo resultante de este proceso. Asi el resultado que se sube al dominio, es liviano y rapido de procesar por el navegador o servidor.
+
+
+
+
 ## Importante.
 
 Quedamos iniciando el video 14 del curso JavaScript Moderno; Guía para  dominar el lenguaje; del curso de Udemy del instructor Fernando Herrera.
