@@ -905,6 +905,14 @@ Un bundler “empaquetador” nos ayuda a empaquetar todo el codigo de nuestro p
 
 Hay maneras diferentes de empaquetar, pero para hacerlo de manera efectiva se suele usar “loaders” y “extensiones” que ayudan a optimizar el codigo resultante de este proceso. Asi el resultado que se sube al dominio, es liviano y rapido de procesar por el navegador o servidor.
 
+### Tipos
+
+* Webpack: 
+
+   En esencia, webpack es un paquete de módulos estáticos para aplicaciones JavaScript modernas. Cuando webpack procesa su aplicación, crea internamente un gráfico de dependencia a partir de uno o más puntos de entrada y luego combina todos los módulos que su proyecto necesita en uno o más paquetes, que son activos estáticos desde los que servir su contenido.
+
+   LLega es muy utilizado por billones de desarrolladores, pero esta llegando a su únto en el cual no puede acelerar el proceso apesar de contar con un equipo con mayores recursos.
+
 
 
 
