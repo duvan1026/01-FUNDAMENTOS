@@ -913,7 +913,19 @@ Hay maneras diferentes de empaquetar, pero para hacerlo de manera efectiva se su
 
    LLega es muy utilizado por billones de desarrolladores, pero esta llegando a su únto en el cual no puede acelerar el proceso apesar de contar con un equipo con mayores recursos.
 
+* Vite:
 
+   Vite (palabra francesa para 'rápido', pronunciado /vit/, como 'veet') es una herramienta de compilación que tiene como objetivo proporcionar una experiencia de desarrollo más rápida y eficiente para proyectos web modernos. Consta de dos partes principales:
+
+   * Un servidor de desarrollo que proporciona amplias mejoras de características sobre los módulos ES nativos, por ejemplo, reemplazo de módulo activo (HMR) extremadamente rápido.
+
+   * Un comando de compilación que agrupa su código con Rollup, preconfigurado para generar activos estáticos altamente optimizados para producción.
+
+   Vite es obstinado y viene con valores predeterminados sensibles listos para usar, pero también es altamente extensible a través de su API de complemento y API de JavaScript con soporte completo de escritura.
+
+   Vite permite realizar cambios en caliente, enfocandose solamente en el modulo que ha sido modificiado, permitiendo que el desarrolo sea mas fluido.
+
+___
 
 
 ## Importante.
