@@ -899,6 +899,35 @@ ___
             ```
 ___
 
+## Bundlers
+
+Un bundler “empaquetador” nos ayuda a empaquetar todo el codigo de nuestro projecto (html, css, js), para que nosotros podamos subirlo a produccion, es decir al dominio que tenemos en Internet.
+
+Hay maneras diferentes de empaquetar, pero para hacerlo de manera efectiva se suele usar “loaders” y “extensiones” que ayudan a optimizar el codigo resultante de este proceso. Asi el resultado que se sube al dominio, es liviano y rapido de procesar por el navegador o servidor.
+
+### Tipos
+
+* Webpack: 
+
+   En esencia, webpack es un paquete de módulos estáticos para aplicaciones JavaScript modernas. Cuando webpack procesa su aplicación, crea internamente un gráfico de dependencia a partir de uno o más puntos de entrada y luego combina todos los módulos que su proyecto necesita en uno o más paquetes, que son activos estáticos desde los que servir su contenido.
+
+   LLega es muy utilizado por billones de desarrolladores, pero esta llegando a su únto en el cual no puede acelerar el proceso apesar de contar con un equipo con mayores recursos.
+
+* Vite:
+
+   Vite (palabra francesa para 'rápido', pronunciado /vit/, como 'veet') es una herramienta de compilación que tiene como objetivo proporcionar una experiencia de desarrollo más rápida y eficiente para proyectos web modernos. Consta de dos partes principales:
+
+   * Un servidor de desarrollo que proporciona amplias mejoras de características sobre los módulos ES nativos, por ejemplo, reemplazo de módulo activo (HMR) extremadamente rápido.
+
+   * Un comando de compilación que agrupa su código con Rollup, preconfigurado para generar activos estáticos altamente optimizados para producción.
+
+   Vite es obstinado y viene con valores predeterminados sensibles listos para usar, pero también es altamente extensible a través de su API de complemento y API de JavaScript con soporte completo de escritura.
+
+   Vite permite realizar cambios en caliente, enfocandose solamente en el modulo que ha sido modificiado, permitiendo que el desarrolo sea mas fluido.
+
+___
+
+
 ## Importante.
 
 Quedamos iniciando el video 14 del curso JavaScript Moderno; Guía para  dominar el lenguaje; del curso de Udemy del instructor Fernando Herrera.
